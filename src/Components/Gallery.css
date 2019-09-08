@@ -22,12 +22,14 @@ h1 {
 }
 
 .gallery-header {
-  padding-top: 0.9375rem;
+  padding-top: 0rem;
 }
 
 
 .gallery-container {
-  padding-top: 0.9375rem;
+  padding-top: 0.1rem;
+  width:98vw;
+  height:90vh;
 }
 
 .gallery-card {
@@ -35,8 +37,9 @@ h1 {
   overflow: hidden;
   margin-top: 0.4rem;
   margin-bottom: 0.2rem;
-  width: 435px;
-  height: 320px;
+  max-width:100%;
+  height:auto;
+  max-height:100%;
   object-fit: cover;
   display: block;
   cursor: zoom-in;
