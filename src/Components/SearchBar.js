@@ -16,26 +16,19 @@ class SearchBar extends React.Component {
     
     render() {
         return (
-            <div  className="app-input">
-                <form onSubmit= {this.onFormSubmit} className= "ui small icon input">
-                    <input style={{width: 700, height: 35}}
+            <div className="app-input">
+                <form onSubmit={this.onFormSubmit} className="ui small icon input">
+                    <input  style={{width: 700, height: 35}}
                             type="text"
-                            placeholder="Eran is the king"
+                            placeholder="Search for images"
                             value={this.state.term}
-                            onChange = {this.onInputChange}/>
-                    <i aria-hidden="true" className="search circular small link icon" 
-                                            onClick={this.onFormSubmit}></i>
+                            onChange={this.onInputChange}/>
+                    <i aria-hidden="true" className="search circular small link icon" onClick={this.onFormSubmit}></i>
                 </form>
             </div>
 
         );
-    }
-
+    };
 }
-
-<div class="ui icon input">
-  <input type="text" placeholder="Search..." />
-  <i aria-hidden="true" class="search circular link icon"></i>
-</div>
 
 export default SearchBar;

@@ -11,11 +11,11 @@ class ExpansionBox extends React.Component{
             return null;
 
         return (
-        <div className="modal-overlay" onClick={onImgClick.bind(this,src)}>
-         <div className="modal-body">
-          <span className="modal-close" onClick={onImgClick.bind(this,src)}>
-            <span><i className="close icon"></i></span>
-          </span>
+        <div className="box-overlay" onClick={onImgClick.bind(this,src)}>
+         <div className="box-body">
+          <div className="box-close" onClick={onImgClick.bind(this,src)}>
+            <i className="close icon"></i>
+          </div>
           
           <img src={src} alt={"This to expand"} />
          </div>

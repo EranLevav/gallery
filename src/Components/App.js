@@ -15,9 +15,7 @@ class App extends React.Component {
         params: {query: term,
                  per_page:12	 },
     });
-    this.setState({ urls: response.data.results }); 
-    console.log(this.state.urls);
-   
+    this.setState({ urls: response.data.results });    
     this.changeImages();
   }
 
@@ -28,8 +26,7 @@ class App extends React.Component {
 
   render() {
     
-    console.log(this.state.images);
-
+    // console.log(this.state.images);
     return (
       <div className="app-root">
         <div className="header-site">

@@ -2,8 +2,6 @@ import './Gallery.css';
 import React from 'react';
 import Image from './Image';
 import ExpansionBox from './ExpansionBox';
-import NavBox from './NavBox';
-
 
 class Gallery extends React.Component{
 
@@ -22,7 +20,7 @@ class Gallery extends React.Component{
       showBox: true,
       src: src
     })
-    console.log("open " + src);
+    // console.log("open " + src);
   };  
 
   closeBox = (src) => {
@@ -30,11 +28,11 @@ class Gallery extends React.Component{
       showBox: false,
       src: ''
     })
-    console.log("close " + src);
+    // console.log("close " + src);
   };
 
   downLoadImg = (src) => {
-    console.log(src);
+    // console.log(src);
     return (<a href={src}>
              <img src={src} alt="download"/>
            </a>);
@@ -48,7 +46,7 @@ class Gallery extends React.Component{
       <div refs="gallery-container" className="container-fluid gallery-container">
         <div className="row">
           {this.props.imageUrls.map((imageUrl,index) => {
-            return <div className="col-lg-3 col-md-4 col-sm-6" key={index + 1}>
+            return <div className="col-md-4 col-sm-6" key={index + 1}>
                       <div className="gallery-card">
                         <div className="gallery-thumbnail">
                         <Image src={imageUrl}
@@ -63,7 +61,6 @@ class Gallery extends React.Component{
         <ExpansionBox BoxOpen={this.state.showBox}
                       src={this.state.src} 
                       onImgClick={this.closeBox}/> 
-          {/* <NavBox className="NavBox-leftArrow" onClick={this.handlePhotoNavClick.bind(this, -1)}/> */}
       </div> 
     ) 
   }

@@ -21,7 +21,9 @@ class Image extends React.Component{
                                           onClick={this.props.onImgClick.bind(this,this.props.src)}/>
             <div className="card-icon">
               <div className="ui left labeled button">
-                <button className="ui right pointing basic label" onClick={this.toggleLike} style={{width:40}}>
+                <button className="ui right pointing basic label"
+                        onClick={this.toggleLike} 
+                        style={{width:40}} >
                   <i className="thumbs up icon"></i>
                 </button>
                 <a className="ui left pointed basic label">{this.state.likes}</a>

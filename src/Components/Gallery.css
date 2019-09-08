@@ -46,6 +46,7 @@ h1 {
 }
    
 .gallery-thumbnail {
+  opacity: 0.9;
   max-width: 100%;
   max-height:  100%;
   border-radius: 4px;
@@ -71,13 +72,14 @@ h1 {
 
 .gallery-thumbnail:hover {
   cursor: auto;
+  opacity: 1;
 }
 
 .gallery-card:hover ~.card-icon {
   opacity:1;
 }
 
-.modal-overlay {
+.box-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -86,7 +88,7 @@ h1 {
   background: rgba(21, 21, 22, 0.582);
 }
 
-.modal-body {
+.box-body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -101,7 +103,7 @@ h1 {
   border-radius: 4px;
 }
 
-.modal-close {
+.box-close {
   position: absolute;
   cursor: pointer;
   right: 0px;
@@ -110,7 +112,7 @@ h1 {
   transition: all .25s ease-in-out;
 }
 
-.modal-close:hover {
+.box-close:hover {
   color: #fff;
 }
 
