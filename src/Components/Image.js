@@ -13,6 +13,12 @@ class Image extends React.Component{
                        likes: this.state.likes + action});
       }
 
+      shareHandle = () => {
+        console.log(this.state.url);
+        let encodedURL = encodeURI(this.props.src);
+         <div href={`https://facebook.com/sharer/sharer.php?u=${encodedURL}`}></div>
+      }
+
       render() {
 
         console.log(this.props.className);
@@ -31,7 +37,10 @@ class Image extends React.Component{
                 </button>
                 <a className="ui left pointed basic label">{this.state.likes}</a>
               </div>
-              <button className="ui mini vertical animated color1 button" style={{width:45, height:33}}>
+              <button className="ui mini vertical animated color1 button"
+                      style={{width:45, height:33}}
+                      onClick={this.shareHandle}
+              >
                 <div className="hidden content">Share</div>
                 <div className="visible content"><i class="share large icon"></i></div>
               </button> 
