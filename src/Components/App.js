@@ -1,4 +1,4 @@
-import './Gallery.css';
+import './App.css';
 import React from 'react';
 import unsplash from '../api/unsplash';
 import Gallery from './Gallery';

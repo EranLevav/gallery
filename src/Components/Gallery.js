@@ -1,4 +1,4 @@
-import './Gallery.css';
+import './App.css';
 import React from 'react';
 import Image from './Image';
 import ExpansionBox from './ExpansionBox';
@@ -8,11 +8,10 @@ class Gallery extends React.Component{
   constructor(props){
     super(props);
   
-  this.state = {showBox: false, src: ''};
+    this.state = {showBox: false, src: ''};
 
-  this.openBox = this.openBox.bind(this);
-  this.closeBox = this.closeBox.bind(this);
-  this.downLoadImg = this.downLoadImg.bind(this);
+    this.openBox = this.openBox.bind(this);
+    this.closeBox = this.closeBox.bind(this);
   }
 
   openBox = (src) => {
@@ -20,7 +19,6 @@ class Gallery extends React.Component{
       showBox: true,
       src: src
     })
-    // console.log("open " + src);
   };  
 
   closeBox = (src) => {
@@ -28,15 +26,7 @@ class Gallery extends React.Component{
       showBox: false,
       src: ''
     })
-    // console.log("close " + src);
   };
-
-  downLoadImg = (src) => {
-    // console.log(src);
-    return (<a href={src}>
-             <img src={src} alt="download"/>
-           </a>);
-  }
 
 
   render() {
@@ -46,18 +36,16 @@ class Gallery extends React.Component{
       <div refs="gallery-container" className="container-fluid gallery-container">
         <div className="row">
           {this.props.imageUrls.map((imageUrl,index) => {
-            return <div className="col-md-4 col-sm-6" key={index + 1}>
+            return <div className="col-lg-3 col-md-4 col-sm-6" key={index + 1}>
                       <div className="gallery-card">
-                        <div className="gallery-thumbnail">
-                        <Image src={imageUrl}
-                               alt={"Image number" + (index + 1)}
-                               onImgClick={this.openBox}/> 
-                        </div>       
+                        <Image  className="gallery-thumbnail"
+                                src={imageUrl}
+                                alt={"Image number" + (index + 1)}
+                                onImgClick={this.openBox}/> 
                       </div>
-                    </div>;})
+                   </div>})
           }
         </div>
-
         <ExpansionBox BoxOpen={this.state.showBox}
                       src={this.state.src} 
                       onImgClick={this.closeBox}/> 
